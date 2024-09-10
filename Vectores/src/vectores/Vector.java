@@ -23,8 +23,4 @@ public class Vector {
     public int[] getVector(){
         return this.vector;
     }
-    
-    public void print(){
-        
-    }
 }
