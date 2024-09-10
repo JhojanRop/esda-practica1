@@ -50,4 +50,22 @@ public class Vector {
         
         return multiplos;
     }
+
+    public float promedioParesEnPosicionesImpares(int [] vector) {
+        int suma = 0;
+        int contador =0;
+
+        for (int i = 1; i < this.vector.length; i+=2) {
+            if(vector[i] %2 == 0){
+                suma += vector[i];
+                contador++;
+            }
+        }
+        
+        if(contador > 0){
+            return (float)suma/contador;
+        } else{
+            return 0;
+        }
+    }
 }
