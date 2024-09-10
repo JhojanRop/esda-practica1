@@ -98,4 +98,27 @@ public class Vector {
         return contador;
     }
     
+    public int[] eliminarElemento(int[] vector, int elemento){
+        int indice = -1;
+        for (int i = 0; i < vector.length; i++) {
+            if(vector[i] == elemento){
+                indice = i;
+                break;
+            }
+        }
+
+        if (indice == -1){
+            System.out.println("El elemento" + elemento + "no está en el el vector");
+            return vector;
+        }
+
+        int[] nuevoVector = new int[vector.length - 1];
+        for (int i = 0, j = 0; i < vector.length; i++) {
+            if (i != indice) {
+                nuevoVector[j++] = vector[i];
+            }
+        }
+            
+        return nuevoVector;
+    }
 }
