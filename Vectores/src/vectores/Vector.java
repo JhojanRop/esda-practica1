@@ -81,4 +81,21 @@ public class Vector {
             }
         }
     }
+
+    public int contarElementoMayorQuePromedio(int[] vector){
+        double suma=0;
+            for (int num : vector) {
+                suma += num;
+            }
+            
+        double promedio = suma/this.vector.length;
+        int contador =0;
+            for (int num : vector){
+                if(num > promedio){
+                    contador ++;
+                }
+            }
+        return contador;
+    }
+    
 }
