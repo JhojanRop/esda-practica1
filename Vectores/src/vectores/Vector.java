@@ -1,16 +1,23 @@
 package vectores;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Vector {
     private int[] vector;
     static Random rnd = new Random();
+    static Scanner readLine = new Scanner(System.in);
     
     public Vector(int n){
         this.vector = new int[n];
     }
     
-    public int[] manualFill(int[] vector){
+    public int[] manualFill(){
+        for (int i = 0; i < this.vector.length; i++){
+            System.out.print("[" + i + "]: ");
+            this.vector[i] = readLine.nextInt();
+        }
+        
         return vector;
     }
     
