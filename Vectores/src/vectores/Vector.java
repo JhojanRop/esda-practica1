@@ -3,17 +3,28 @@ package vectores;
 import java.util.Random;
 
 public class Vector {
-    Random rnd = new Random();
+    private int[] vector;
+    static Random rnd = new Random();
     
-    public static int[] create(int n){
-        return new int[n];
+    public Vector(int n){
+        this.vector = new int[n];
     }
     
-    public static int[] manualFill(int[] vector){
+    public int[] manualFill(int[] vector){
         return vector;
     }
     
-    public static int[] randomFill(int[] vector, int minRange, int maxRange){
+    public int[] randomFill(int minRange, int maxRange){
+        int vectorLenght = this.vector.length;
+        for (int i=0; i < vectorLenght; i++) vector[i] = rnd.nextInt(minRange, maxRange);
         return vector;
+    }
+    
+    public int[] getVector(){
+        return this.vector;
+    }
+    
+    public void print(){
+        
     }
 }
