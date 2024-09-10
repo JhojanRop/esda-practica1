@@ -68,4 +68,17 @@ public class Vector {
             return 0;
         }
     }
+
+    public void ascendinSort(){
+        int tempo;
+        for (int i = 0; i < this.vector.length; i++) {
+            for (int k = 0; k < this.vector.length - 1; k++) {
+                if (this.vector[k] > this.vector[k + 1]) {
+                    tempo = this.vector[k];
+                    this.vector[k] = this.vector[k + 1];
+                    this.vector[k + 1] = tempo;
+                }
+            }
+        }
+    }
 }
