@@ -24,7 +24,23 @@ public class Vector {
         return this.vector;
     }
     
-    public void print(){
+    public int[] obtenerMultiplosDeCuatro(int[]vector){
+    int contador = 0;
+    for (int num : vector){
+        if (num % 4 == 0){
+            contador ++;
+        }
+    }
+    
+    int[] multiplos = new int[contador];
+        int indice = 0;
+
+        for (int num : vector) {
+            if (num % 4 == 0){
+                multiplos[indice++] = num;
+            }
+        }
         
+        return multiplos;
     }
 }
