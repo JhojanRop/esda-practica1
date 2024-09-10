@@ -69,17 +69,19 @@ public class Vector {
         }
     }
 
-    public void ascendinSort(){
+    public int[] ascendinSort(int[] vector){
         int tempo;
-        for (int i = 0; i < this.vector.length; i++) {
-            for (int k = 0; k < this.vector.length - 1; k++) {
-                if (this.vector[k] > this.vector[k + 1]) {
-                    tempo = this.vector[k];
-                    this.vector[k] = this.vector[k + 1];
-                    this.vector[k + 1] = tempo;
+        for (int i = 0; i < vector.length; i++) {
+            for (int k = 0; k < vector.length - 1; k++) {
+                if (vector[k] > vector[k + 1]) {
+                    tempo = vector[k];
+                    vector[k] = vector[k + 1];
+                    vector[k + 1] = tempo;
                 }
             }
         }
+        
+        return vector;
     }
 
     public int contarElementoMayorQuePromedio(int[] vector){
@@ -108,7 +110,7 @@ public class Vector {
         }
 
         if (indice == -1){
-            System.out.println("El elemento" + elemento + "no está en el el vector");
+            System.out.println("El número [" + elemento + "] no está en el el vector");
             return vector;
         }
 
